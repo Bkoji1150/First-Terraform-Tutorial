@@ -56,7 +56,7 @@ spec:
                     kubectl create namespace $PROJECT-${env.BRANCH_NAME.toLowerCase()}
                     set -e
                     """
-                    sh "curl -o /tmp/terraform.zip -LO https://releases.hashicorp.com/terraform/1.1.6/terraform_1.1.6_darwin_arm64.zip"
+                    sh "curl -o /tmp/terraform.zip -LO https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip"
                     sh " unzip /tmp/terraform.zip"
                     sh "chmod +x terraform && mv terraform /usr/local/bin/"
                     sh "terraform -version"
